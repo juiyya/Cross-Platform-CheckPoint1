@@ -6,29 +6,24 @@ o projeto foi criado como atividade acadêmica para praticar componentes básico
 
 ## como testar o projeto
 
-primeiro, clone o repositório ou faça o download dos arquivos.
+clone o repositório ou faça o download dos arquivos.
 
-depois, abra o terminal dentro da pasta do projeto e instale as dependências:
+abra o terminal dentro da pasta do projeto e instale as dependências:
 
 ```bash
 npm install
 ```
 
-instale versao web com 
 ```bash
 npx expo install react-dom react-native-web
 ```
 
 inicie o expo e clique W para abrir o localhost
 ```bash
-npx expo start
-```
-
-o `-c` serve para limpar o cache do projeto. se der erro tira o -c
-
-```bash
 npx expo start -c
 ```
+
+o `-c` serve para limpar o cache do projeto.
 
 ## sobre o projeto
 
@@ -46,19 +41,6 @@ cada álbum possui as seguintes informações:
 os dados ficam armazenados dentro do array `albuns`, localizado no arquivo `App.js`.
 
 a `FlatList` percorre esse array e renderiza um componente `AlbumCard` para cada álbum cadastrado.
-
-## tecnologias utilizadas
-
-- react native;
-- expo;
-- javascript;
-- `View`;
-- `Text`;
-- `Image`;
-- `StyleSheet`;
-- `FlatList`;
-- componentes;
-- props.
 
 ## organização do projeto
 
@@ -99,45 +81,8 @@ ele recebe os dados através de props e apresenta a capa, o título, o artista, 
 
 a pasta `assets/albums` guarda todas as imagens utilizadas como capas dos álbuns.
 
-## como adicionar outro álbum
 
-primeiro, coloque a imagem da capa dentro da pasta:
-
-```text
-assets/albums
-```
-
-depois, abra o arquivo `App.js` e adicione um novo objeto dentro do array `albuns`:
-
-```js
-{
-  id: '10',
-  titulo: 'nome do álbum',
-  artista: 'nome do artista',
-  ano: '2026',
-  tempo: '40min',
-  genero: 'pop',
-  capa: require('./assets/albums/nova-capa.jpg'),
-},
-```
-
-cada álbum precisa possuir um `id` diferente.
-
-o nome e a extensão da imagem precisam ser exatamente iguais aos utilizados no `require`.
-
-por exemplo, se o arquivo for:
-
-```text
-nova-capa.png
-```
-
-o código deverá utilizar:
-
-```js
-capa: require('./assets/albums/nova-capa.png'),
-```
-
-## componentes utilizados
+## requisitos do prof. e componentes utilizados
 
 ### View
 
